@@ -22,7 +22,7 @@ jobs:
       working-directory: ./client
     
     - name: Build and deploy
-      shell: pwsh
-      run: |
-        . ${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -ExecutionPolicy Bypass -RepoPath ${{ github.workspace }} -CI
+      env:
+        CI: false
+      run: powershell -ExecutionPolicy Bypass -File DeployPSScripts\Scripts\DeployWeb.ps1 -RepoPath ${{ github.workspace }} -CI
     
