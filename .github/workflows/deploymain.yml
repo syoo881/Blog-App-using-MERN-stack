@@ -22,5 +22,6 @@ jobs:
       working-directory: ./client
     
     - name: Build and deploy
-      run: powershell -ExecutionPolicy Bypass -File ${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -RepoPath ${{ github.workspace }} -CI
+      shell: pwsh
+      run: .\${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -ExecutionPolicy Bypass -RepoPath ${{ github.workspace }} -CI
     
