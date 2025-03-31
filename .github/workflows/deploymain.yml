@@ -23,5 +23,6 @@ jobs:
     
     - name: Build and deploy
       shell: pwsh
-      run: .\${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -ExecutionPolicy Bypass -RepoPath ${{ github.workspace }} -CI
+      run: |
+        .\${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -ExecutionPolicy Bypass -RepoPath ${{ github.workspace }} -CI
     
