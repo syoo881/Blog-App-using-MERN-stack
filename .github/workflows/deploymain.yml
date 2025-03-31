@@ -22,10 +22,5 @@ jobs:
       working-directory: ./client
     
     - name: Build and deploy
-      run: powershell -ExecutionPolicy Bypass -File DeployPSScripts\Scripts\DeployWeb.ps1 -RepoPath ${{ github.workspace }} -CI
+      run: powershell -ExecutionPolicy Bypass -File ${{ github.workspace }}\DeployPSScripts\Scripts\DeployWeb.ps1 -RepoPath ${{ github.workspace }} -CI
     
-    - name: Copy DeployPSScripts directory - DEBUG
-      if: always()
-      run: |
-        Get-ChildItem -Path . -Recurse -Directory | Select-Object FullName
-        Get-ChildItem -Path .\DeployPSScripts -Recurse -ErrorAction SilentlyContinue | Select-Object FullName
