@@ -54,13 +54,11 @@ cd server && npm start
 cd client && npm start
 ```
 
-
 6. Access the application in your web browser at [http://localhost:3000](http://localhost:3000).
 
 ## Contributing
 
 We welcome contributions from the community. If you'd like to contribute to this project, please feel free to open an issue or Make a PR.
-
 
 ## Acknowledgments
 
@@ -71,3 +69,5 @@ We would like to thank all contributors and the open-source community for their 
 Feel free to explore the codebase and start creating and sharing your blogs with the world! If you have any questions or need assistance, please don't hesitate to reach out.
 
 Happy blogging!
+
+Test Update Readme
